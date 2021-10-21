@@ -1,0 +1,86 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: #e8e8e8;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.container--sm {
+  width: 1210px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/*============================= TYPOGRPHY STYLES ===========================*/
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.title--sm {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 28px;
+}
+.title--xl {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -2.25px;
+}
+
+/*=================================== SPACING STYLES =====================================*/
+.mb-15 {
+  margin-bottom: 15px;
+}

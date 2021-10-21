@@ -1,0 +1,260 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: #e8e8e8;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.container--sm {
+  width: 1210px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/*============================= TYPOGRPHY STYLES ===========================*/
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.title--sm {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 28px;
+}
+.title--xl {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -2.25px;
+}
+
+/*=================================== SPACING STYLES =====================================*/
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.header {
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 11;
+  /*============================== HEADER NAVIGATION STYLES =================================*/
+  /*================================ HEADER FORM STYLES ===================================*/
+  /*============================== HEADER ICON STYLES ======================================*/
+}
+@media only screen and (max-width: 570px) {
+  .header .container {
+    padding: 0px 20px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .header .container > .d-flex {
+    flex-wrap: wrap;
+    padding: 10px 0px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .header__mobile {
+    display: block;
+    width: max-content;
+    height: max-content;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .header__mobile > .line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 2px auto;
+  }
+}
+.header__logo {
+  padding-right: 6%;
+}
+@media only screen and (max-width: 770px) {
+  .header__logo {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+}
+.header__logo svg {
+  width: 100%;
+  object-fit: contain;
+}
+@media only screen and (max-width: 770px) {
+  .header__logo svg {
+    width: 19vw;
+  }
+}
+.header__nav {
+  height: 100%;
+}
+@media only screen and (max-width: 770px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__navItem {
+  width: max-content;
+  height: 72px;
+  padding: 0px 20px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.header__navItem a {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.header__form {
+  border: 1px solid var(--grey);
+  height: 37px;
+  flex: 0.6;
+}
+@media only screen and (max-width: 770px) {
+  .header__form {
+    order: 1;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+.header__formbtn {
+  border: none;
+  background-color: white;
+  height: 100%;
+  padding: 5px 10px;
+}
+.header__forminp {
+  border: none;
+  background-color: white;
+  outline: none;
+  height: 100%;
+  min-width: 240px;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.header__icons {
+  flex: 0.3;
+  margin-left: 2%;
+}
+.header__icons a:not(:last-child) {
+  margin-right: 10px;
+}
+.header__icons a svg {
+  width: 100%;
+  max-width: 100%;
+  min-width: 18px;
+  object-fit: cover;
+}
+.header__icons a img {
+  width: 100%;
+  min-width: 50px;
+}
+
+.banner {
+  width: 100%;
+  height: 65vh;
+  background-image: url(https://cdn.shopify.com/s/files/1/0274/4293/7933/files/Half-Term-Sale-22-10.21-Banner-Desktop.jpg?v=1634888193);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 70px;
+  padding-left: 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.button::before, .button::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+.button::before {
+  left: -70px;
+  opacity: 0;
+}
+.button::after {
+  right: 0px;
+}
+.button:hover {
+  padding-right: 0px;
+  padding-left: 70px;
+}
+.button:hover::before {
+  opacity: 1;
+  left: 0px;
+}
+.button:hover::after {
+  right: -50px;
+  opacity: 0;
+}

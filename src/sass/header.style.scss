@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 11;
+
+    .container {
+
+        @media only screen and (max-width: 570px) {
+            padding: 0px 20px;
+            
+        }
+        & > .d-flex {
+            @media only screen and (max-width: 770px) {
+                flex-wrap: wrap;
+                padding: 10px 0px;
+            }
+        }
+    }
+
+    &__mobile {
+        @media only screen and (max-width: 770px) {
+            display: block;
+            width: max-content;
+            height: max-content;
+            
+        }
+
+        & > .line {
+            @media only screen and (max-width: 770px) {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: black;
+                margin: 2px auto;
+                
+            }
+        }
+    }
+
+    &__logo {
+        padding-right: 6%;
+        @media only screen and (max-width: 770px) {
+            margin-right: auto;
+            margin-left: 20px;
+            
+        }
+        svg {
+            width: 100%;
+            object-fit: contain;
+
+            @media only screen and (max-width: 770px) {
+                width: 19vw;
+                
+            }
+        }
+    }
+    /*============================== HEADER NAVIGATION STYLES =================================*/
+    &__nav {
+        height: 100%;
+
+        @media only screen and (max-width: 770px) {
+            display: none;
+        }
+
+        &Item {
+            width: max-content;
+            height: 72px;
+            padding: 0px 20px;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+
+            & a {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    /*================================ HEADER FORM STYLES ===================================*/
+    &__form {
+        border: 1px solid var(--grey);
+        height: 37px;
+        flex: 0.6;
+
+        @media only screen and (max-width: 770px) {
+            order: 1;
+            flex: 1;
+            margin-top: 10px;
+            margin-left: 0px;
+
+        }
+
+        &btn {
+            border: none;
+            background-color: white;
+            height: 100%;
+            padding: 5px 10px;
+        }
+
+        &inp {
+            border: none;
+            background-color: white;
+            outline: none;
+            height: 100%;
+            min-width: 240px;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    }
+
+    /*============================== HEADER ICON STYLES ======================================*/
+
+    &__icons {
+        flex: 0.3;
+        margin-left: 2%;
+
+        a {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            svg {
+                width: 100%;
+                max-width: 100%;
+                min-width: 18px;
+                object-fit: cover;
+            }
+
+            & img {
+                width: 100%;
+                min-width: 50px;
+            }
+        }
+    }
+}
