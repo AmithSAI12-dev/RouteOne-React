@@ -1,22 +1,50 @@
 .brands {
     width: 100%;
     height: max-content;
+    padding: 20px 0px;
     background-color: var(--grey-primary);
     
-    .container > a {
-        display: block;
-        margin: 0 20px;
-        max-width: 101px;
+    .container {
 
-        img {
-            width: 100%;
-            object-fit: contain;
+        @media only screen and (max-width:770px) {
+            padding: 0px 10px;
+        }
+
+        &.d-flex {
+            @media only screen and (max-width: 770px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        & .d-flex > a {
+            display: block;
+            margin: 0 20px;
+            max-width: 101px;
+
+            @media only screen and (max-width: 770px) {
+                min-width: 70px;
+            }
+
+            @media only screen and (max-width: 430px) {
+                min-width: 57px;
+            }
+    
+            img {
+                width: 100%;
+                min-width: 40px;
+                object-fit: contain;
+            }
         }
     }
     &__btn {
         position: relative;
         height: 100%;
-        padding-left: 60px;
+        padding-left: 6%;
+
+        @media only screen and (max-width: 770px) {
+            margin-top: 30px;
+            padding-left: 20px;
+        }
         
         &::before {
             content: '';
@@ -29,6 +57,10 @@
             top: 0;
             bottom: 0;
             margin: auto;
+
+            @media only screen and (max-width: 770px) {
+                display: none;
+            }
         }
     }
 }
