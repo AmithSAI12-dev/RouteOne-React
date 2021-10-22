@@ -6,10 +6,19 @@
 
 :root {
     --grey: #e8e8e8;
+    --grey-primary: #FBFBFB;
 }
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: 560px) {
+        font-size: 58%;
+    }
+
+    @media only screen and (max-width: 430px) {
+        font-size: 52%;
+    }
 }
 
 body {
@@ -80,13 +89,13 @@ a, a:link, a:visited {
     &--sm {
         font-size: 1.8rem;
         font-weight: 300;
-        line-height: 28px;
+        line-height: 2.8rem;
     }
 
     &--xl {
         font-size: 6rem;
         font-weight: 700;
-        line-height: 80px;
+        line-height: 8rem;
         letter-spacing: -2.25px;
     }
 }
@@ -94,6 +103,6 @@ a, a:link, a:visited {
 
 /*=================================== SPACING STYLES =====================================*/
 
-.mb-15 {
-    margin-bottom: 15px;
+.mb-45 {
+    margin-bottom: 45px;
 }
