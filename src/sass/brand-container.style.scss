@@ -16,23 +16,26 @@
             }
         }
 
-        & .d-flex > a {
-            display: block;
-            margin: 0 20px;
-            max-width: 101px;
-
-            @media only screen and (max-width: 770px) {
-                min-width: 70px;
-            }
-
-            @media only screen and (max-width: 430px) {
-                min-width: 57px;
-            }
+        & .d-flex {
+            flex: .9;
+            & > a {
+                display: block;
+                margin: 0 20px;
+                max-width: 101px;
     
-            img {
-                width: 100%;
-                min-width: 40px;
-                object-fit: contain;
+                @media only screen and (max-width: 770px) {
+                    min-width: 70px;
+                }
+    
+                @media only screen and (max-width: 430px) {
+                    min-width: 57px;
+                }
+        
+                img {
+                    width: 100%;
+                    min-width: 40px;
+                    object-fit: contain;
+                }
             }
         }
     }
