@@ -1,0 +1,34 @@
+.brands {
+    width: 100%;
+    height: max-content;
+    background-color: var(--grey-primary);
+    
+    .container > a {
+        display: block;
+        margin: 0 20px;
+        max-width: 101px;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__btn {
+        position: relative;
+        height: 100%;
+        padding-left: 60px;
+        
+        &::before {
+            content: '';
+            width: 1px;
+            height: 58px;
+            background: #e8e8e8;
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
