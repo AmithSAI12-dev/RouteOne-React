@@ -10,6 +10,17 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 1440px) {
+  .featuredCollection {
+    height: 41vw;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .featuredCollection {
+    min-width: 250px;
+    height: 420px;
+  }
+}
 .featuredCollection__overlay {
   position: absolute;
   width: 100%;

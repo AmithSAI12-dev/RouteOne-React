@@ -10,6 +10,15 @@
     background-position: center center;
     background-repeat: no-repeat;
 
+    @media only screen and (max-width: 1440px) {
+        height: 41vw;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        min-width: 250px;
+        height: 420px;
+    }
+
     &__overlay {
         position: absolute;
         width: 100%;
@@ -66,7 +75,7 @@
     }
 
     &__button {
-        transition: .3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
         position: absolute;
         width: 100%;
         bottom: -40px;
@@ -76,7 +85,6 @@
         padding-right: 50px;
         letter-spacing: 1.71px;
     }
-    
 
     &:hover &__overlay {
         opacity: 0.5;

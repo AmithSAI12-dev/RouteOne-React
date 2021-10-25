@@ -12,12 +12,12 @@
 html {
     font-size: 62.5%;
 
-    @media only screen and (max-width: 560px) {
-        font-size: 58%;
+    @media only screen and (max-width: 620px) {
+        font-size: 56%;
     }
 
-    @media only screen and (max-width: 430px) {
-        font-size: 52%;
+    @media only screen and (max-width: 560px) {
+        font-size: 48%;
     }
 }
 
