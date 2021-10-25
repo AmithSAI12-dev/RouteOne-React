@@ -1,16 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
 import Button from "../button/Button.component.jsx";
-import { brands } from "./brand.js";
+import Brand from './brand/Brand.component.jsx';
 
-function BrandContainer() {
+function BrandContainer({brands}) {
     return (
         <section className="brands">
             <div className="container d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center justify-content-between"n>
-                    {brands.map(({ id, name, image }) => (
-                        <a href="/" key={id}>
-                            <img src={image} alt={name} />
-                        </a>
+                    {brands.map((props) => (
+                        <Brand key={props.id} {...props}/>
                     ))}
                 </div>
                 <div className="brands__btn">
@@ -21,4 +20,8 @@ function BrandContainer() {
     );
 }
 
-export default BrandContainer;
+const mapStateToProps = state => ({
+    brands: state.brandReducer.brands
+})
+
+export default connect(mapStateToProps)(BrandContainer);

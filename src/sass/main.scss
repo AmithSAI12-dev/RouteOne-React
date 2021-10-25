@@ -84,6 +84,10 @@ a, a:link, a:visited {
     &--uppercase {
         text-transform: uppercase;
     }
+
+    &--right {
+        text-align: right;
+    }
 }
 
 .title {
@@ -104,6 +108,14 @@ a, a:link, a:visited {
 
 /*=================================== SPACING STYLES =====================================*/
 
+.mt-45 {
+    margin-top: 45px;
+}
+
 .mb-45 {
     margin-bottom: 45px;
+}
+
+.pt-45 {
+    padding-top: 45px;
 }

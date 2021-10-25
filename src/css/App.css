@@ -79,6 +79,9 @@ a, a:link, a:visited {
 .text--uppercase {
   text-transform: uppercase;
 }
+.text--right {
+  text-align: right;
+}
 
 .title--sm {
   font-size: 1.8rem;
@@ -93,8 +96,16 @@ a, a:link, a:visited {
 }
 
 /*=================================== SPACING STYLES =====================================*/
+.mt-45 {
+  margin-top: 45px;
+}
+
 .mb-45 {
   margin-bottom: 45px;
+}
+
+.pt-45 {
+  padding-top: 45px;
 }
 
 .header {
@@ -288,6 +299,9 @@ a, a:link, a:visited {
   .brands .container.d-flex {
     flex-wrap: wrap;
   }
+}
+.brands .container .d-flex {
+  flex: 0.9;
 }
 .brands .container .d-flex > a {
   display: block;
