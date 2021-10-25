@@ -1,0 +1,83 @@
+.featuredCollection {
+  width: 360px;
+  min-width: 360px;
+  height: 599px;
+  margin: 0 0.5px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(https://cdn.shopify.com/s/files/1/0274/4293/7933/files/COMPLETES-SKATEBOARD-BANNER_b0b66840-e4dc-4f9d-b4af-014149382cd4_x1200.jpg?v=1634824310);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.featuredCollection__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #292d2b;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.featuredCollection__txt:not(.hover-only) {
+  position: absolute;
+  bottom: 40px;
+  left: 76px;
+  transform: rotate(180deg);
+  transition: 0.3s all cubic-bezier(0.83, 0, 0.17, 1);
+}
+.featuredCollection__txt:not(.hover-only) > h4 {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: white;
+  white-space: nowrap;
+}
+.featuredCollection__txt.hover-only {
+  transform: rotate(90deg);
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  width: 1px;
+  background-color: black;
+  height: 1px;
+  left: 40px;
+  top: -50%;
+  white-space: nowrap;
+  transition: 0.3s all cubic-bezier(0.83, 0, 0.17, 1);
+}
+.featuredCollection__txt.hover-only > h4 {
+  transform: rotate(180deg);
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: white;
+}
+.featuredCollection__button {
+  transition: 0.3s all ease-in-out;
+  position: absolute;
+  width: 100%;
+  bottom: -40px;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  letter-spacing: 1.71px;
+}
+.featuredCollection:hover .featuredCollection__overlay {
+  opacity: 0.5;
+}
+.featuredCollection:hover .featuredCollection__txt {
+  bottom: -50%;
+}
+.featuredCollection:hover .featuredCollection__txt.hover-only {
+  top: 10%;
+}
+.featuredCollection:hover .featuredCollection__button {
+  bottom: 40px;
+}

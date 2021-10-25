@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../../components/banner/Banner.component";
 import BrandContainer from "../../components/brand-container/BrandContainer.component";
+import FeaturedCollection from "../../components/featured-collection/FeaturedCollection.component";
 import IntroText from "../../components/intro-text/IntroText.component";
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
             <section id="category" className="pt-45">
                 <div className="container">
                     <IntroText title="Latest Skateboard" subTitle="Discover" />
+                    <FeaturedCollection />
                 </div>
             </section>
         </main>
