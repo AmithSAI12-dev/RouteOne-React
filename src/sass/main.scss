@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +8,8 @@
 
 :root {
     --grey: #e8e8e8;
-    --grey-primary: #FBFBFB;
+    --grey-primary: #fbfbfb;
+    --primary: #00aba2;
 }
 
 html {
@@ -24,20 +27,21 @@ html {
 body {
     font-weight: 400;
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 ul li {
     list-style: none;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
     text-decoration: none;
     color: inherit;
 }
 
-
-.container{
+.container {
     width: 1440px;
     max-width: 100%;
     margin-left: auto;
@@ -55,6 +59,13 @@ a, a:link, a:visited {
     }
 }
 
+.no {
+    &--padding {
+        padding: 0px;
+    }
+}
+
+/*==================================== FLEX STYLES ===================================*/
 
 .d-flex {
     display: flex;
@@ -76,10 +87,39 @@ a, a:link, a:visited {
     justify-content: space-between;
 }
 
+.flex-col {
+    flex-direction: column;
+}
+
+/*================================= GRID STYLES =================================*/
+.grid {
+    display: grid;
+    &col {
+        &--2 {
+            grid-template-columns: 1fr 1fr;
+            @media only screen and (max-width: 800px) {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    }
+    &row {
+        &--1 {
+            grid-template-rows: 1fr;
+            grid-auto-rows: 1fr;
+        }
+    }
+}
 
 /*============================= TYPOGRPHY STYLES ===========================*/
 
 .text {
+    &--capitalize {
+        text-transform: capitalize;
+    }
+
+    &--center {
+        text-align: center;
+    }
 
     &--uppercase {
         text-transform: uppercase;
@@ -91,6 +131,12 @@ a, a:link, a:visited {
 }
 
 .title {
+    &--xs {
+        font-size: 1.4rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
     &--sm {
         font-size: 1.8rem;
         font-weight: 300;
@@ -105,17 +151,34 @@ a, a:link, a:visited {
     }
 }
 
-
 /*=================================== SPACING STYLES =====================================*/
 
 .mt-45 {
     margin-top: 45px;
 }
 
-.mb-45 {
-    margin-bottom: 45px;
+.mb {
+    &-45 {
+        margin-bottom: 45px;
+    }
+
+    &-100 {
+        margin-bottom: 50px;
+    }
 }
 
-.pt-45 {
-    padding-top: 45px;
+.p {
+
+    &-60 {
+        padding: 60px;
+    }
+    &t {
+        &-45 {
+            padding-top: 45px;
+        }
+
+        &-100 {
+            padding-top: 100px;
+        }
+    }
 }
